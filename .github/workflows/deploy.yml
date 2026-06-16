@@ -12,5 +12,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4   
-      - name: Verify Artifact 
-        run: ls iflows
+      - name: Verify ZIP 
+        run: |
+          test -f iflows/CICD-DEMO.zip
+
+      - name: Success Message
+        run: echo "CICD-DEMO.zip found"
